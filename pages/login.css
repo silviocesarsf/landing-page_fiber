@@ -1,0 +1,52 @@
+@import url(/style.css);
+
+.container-login {
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    background: #FBF8F3;
+}
+
+.left .inputs h1 {
+    font-size: 2em;
+}
+
+.left .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left .inputs input:not(#checkbox) {
+    height: 4rem;
+    width: 25rem;
+    text-indent: 20px;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.left .inputs label,#checkbox, button, p, .checkbox-row {
+    margin: 1rem 0;
+}
+
+.left .inputs .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left .inputs span {
+    color: var(--purple);
+}
+
+.right {
+    background: var(--purple);
+    height: 100%;
+    width: 100%;
+}

@@ -7,6 +7,15 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     border: none;
+    list-style: none;
+}
+
+a:focus {
+    background: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -22,9 +31,12 @@ body {
 
 header { 
     display: flex;
+    position: fixed;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 5rem;
+    z-index: 999;
 }
 
 .logo p {
@@ -222,16 +234,56 @@ footer p {
     color: black;
 }
 
-.menu-icon {
+.mobile-menu-icon {
     display: none;
     pointer-events: none;
 }
 
+.mobile-menu {
+    display: none;
+    pointer-events: none;
+}
+
+
 @media screen and (max-width:768px) {
 
-    .menu-icon {
-        display: inline-block;
+    .mobile-menu-icon {
+        display: block;
         pointer-events: all;
+    }
+
+    .mobile-menu {
+        transition: .5s;
+        border-radius: 10px 0px 10px 50px;
+        position: absolute;
+        display: block;
+        opacity: 1;
+        right: 6%;
+        top: 70%;
+        height: 16rem;
+        pointer-events: all;
+        background-color: rgb(51, 51, 51);
+        z-index: 1;
+    }
+    
+    .off {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .mobile-menu ul {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item,a {
+        display: block;
+        padding-top: 1.2rem;
+        color: white;
     }
 
     header {
@@ -248,8 +300,9 @@ footer p {
         padding: 1rem 1rem;
     }
 
-    .navbar li,a, .btn-header {
+    .link> a,.btn-header a,button{
         display: none;
+        pointer-events: none;
     }
 
     .container-home {
