@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@300;400;500;700&family=Montserrat:wght@200;300;400;700&family=Poppins:wght@200;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+}
+
+:root {
+    --purple:#4D13D1 ;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #FBF8F3;
+    overflow-x: hidden;
+}
+
+header { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+}
+
+.logo p {
+    color: black;
+    font-weight: bold;
+}
+
+.navbar li,a {
+    display: inline-block;
+    color: black;
+    font-weight: 400;
+    margin: 0 1rem;
+}
+
+.btn-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bolder;
+}
+
+.btn {
+    background: var(--purple);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+section {
+    padding: 2rem 5rem;
+}
+
+.home {
+    width: 100%;
+    margin: auto 0;
+}
+
+.container-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-home p {
+    color: rgb(116, 116, 116);
+}
+
+.left h1 {
+    font-size: 3em;
+    line-height: 50px;
+}
+
+.left .stars {
+    display: flex;
+    align-items: center;
+}
+
+.left .stars p {
+    margin: 0 1rem;
+}
+
+.left .stars, h1, p, .buttons-main, .footer-main_text {
+    margin: 1rem 0;
+}
+
+.left .footer-main_text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.left .buttons-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.left .buttons-main p {
+    font-weight: bolder;
+    color: var(--purple);
+    border-bottom: 2px solid;
+}
+
+.right img {
+    height: 500px;
+}
+
+.why {
+    width: 100%;
+    background: white;
+}
+
+.header-why p {
+    color: var(--purple);
+    font-weight: bolder;
+}
+
+.header-why h1 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.advantages .card-advantages {
+    padding: 20px;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.advantages .card-advantages img, h3, p {
+    margin: .5rem 0;
+}
+.advantages .card-advantages p {
+    color: rgb(116, 116, 116);
+}
+
+.card {
+    height: 400px;
+    background: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    object-fit: cover;
+    overflow-y: hidden; 
+}
+
+.card h1, p, button {
+    margin: .5rem 0;
+}
+
+.card .left-card{
+    color: white;
+}
+
+.card > p {
+    font-weight: 400;
+}
+
+.card .btn {
+    background: white;
+    color: var(--purple);
+}
+
+.card .right-card img {
+    margin-top: 3rem;
+    height: 400px;
+    width: 500px;
+}
+
+.reports {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background:white;
+}
+
+.reports .card-reports {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    text-align: center;
+}
+
+.reports .card-reports p {
+    color: black;
+}
+
+.reports .card-reports button {
+    padding: 15px 40px;
+    background: transparent;
+    color: var(--purple);
+    border: 1px solid #ccc;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer p {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.menu-icon {
+    display: none;
+    pointer-events: none;
+}
+
+@media screen and (max-width:768px) {
+
+    .menu-icon {
+        display: inline-block;
+        pointer-events: all;
+    }
+
+    header {
+        padding: 1rem 1rem;
+    }
+    
+    section {
+        padding: 1rem 1rem;
+        max-height:100% !important;
+        overflow-x:hidden;
+    }
+
+    .home {
+        padding: 1rem 1rem;
+    }
+
+    .navbar li,a, .btn-header {
+        display: none;
+    }
+
+    .container-home {
+        flex-direction: column-reverse;
+    }
+
+    .container-home .right img {
+        height: 300px;
+    }
+
+    .left .stars, h1, p, .buttons-main, .footer-main_text {
+        margin: 2rem 0;
+    }
+    
+    .left .stars {
+        display: none;
+    }
+
+    .left .buttons-main {
+        flex-direction: column;
+    }
+
+    .left .footer-main_text {
+        flex-direction: column;
+    }
+
+    .left .footer-main_text img,p {
+        margin: 1rem 0;
+    }
+
+    .advantages {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why .header-why {
+        text-align: center;
+        margin-top: 1ren;
+    }
+
+    .advantages .card-advantages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .why .card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .why .card .right-card img {
+        display: none;
+    }
+
+    .reports {
+        flex-direction: column;
+        overflow: hidden;
+        gap: 0px;
+    }
+
+    .reports .card-reports {
+        transform: scale(80%);
+        width: 300px;
+    }
+}
